@@ -36,7 +36,7 @@ function MenuItem({
         <button
           onClick={(e) => {
             setModalOn(true);
-            setRecepi(strInstructions);
+            setRecepi([strInstructions, strMeal]);
           }}
           className="btn-sub-card"
           style={{ fontSize: ".75rem", margin: "0px" }}

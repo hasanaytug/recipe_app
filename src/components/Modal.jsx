@@ -1,13 +1,14 @@
 import React from "react";
 
-function Modal({ instructions, setModalOn }) {
+function Modal({ recepi, setModalOn }) {
   return (
     <div className="modal">
       <div style={{ position: "relative" }}>
         <button onClick={() => setModalOn(false)} className="modal-close">
           X
         </button>
-        <p>{instructions}</p>
+        <h2>{recepi[1]}</h2>
+        <p>{recepi[0]}</p>
       </div>
     </div>
   );

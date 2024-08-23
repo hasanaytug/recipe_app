@@ -12,7 +12,7 @@ function App() {
   const [cousine, setCousine] = useState([]);
   const [categories, setCategories] = useState([]);
   const [data, setData] = useState([]);
-  const [recepi, setRecepi] = useState("");
+  const [recepi, setRecepi] = useState([]);
   const [modalOn, setModalOn] = useState(false);
 
   const setTabs = (data) => {
@@ -111,11 +111,7 @@ function App() {
             })}
           </div>
         </div>
-        {modalOn ? (
-          <Modal instructions={recepi} setModalOn={setModalOn} />
-        ) : (
-          <></>
-        )}
+        {modalOn ? <Modal recepi={recepi} setModalOn={setModalOn} /> : <></>}
       </div>
     </>
   );
