@@ -36,8 +36,6 @@ function App() {
   };
 
   const handleFilter = (e, v, tab) => {
-    console.log(data);
-
     setData((currentState) => {
       const newState = currentState.filter((d) => e.target.innerHTML === d[v]);
       setTabs(newState);
@@ -81,7 +79,30 @@ function App() {
             }}
           >
             {data.map((d) => {
+              const ingredientsArr = [
+                d.strIngredient1,
+                d.strIngredient2,
+                d.strIngredient3,
+                d.strIngredient4,
+                d.strIngredient5,
+                d.strIngredient6,
+                d.strIngredient7,
+                d.strIngredient8,
+                d.strIngredient9,
+                d.strIngredient10,
+                d.strIngredient11,
+                d.strIngredient12,
+                d.strIngredient13,
+                d.strIngredient14,
+                d.strIngredient15,
+                d.strIngredient16,
+                d.strIngredient17,
+                d.strIngredient18,
+                d.strIngredient19,
+                d.strIngredient20,
+              ];
               const {
+                strYoutube,
                 idMeal,
                 strMeal,
                 strCategory,
@@ -97,6 +118,8 @@ function App() {
                   key={uuidv4()}
                 >
                   <MenuItem
+                    strYoutube={strYoutube}
+                    ingredientsArr={ingredientsArr}
                     setRecepi={setRecepi}
                     setModalOn={setModalOn}
                     idMeal={idMeal}
