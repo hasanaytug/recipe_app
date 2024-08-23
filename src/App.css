@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 50px;
+}
+
+h1 {
+  color: #c7253e;
+  font-size: 3rem;
+  margin-top: 50px;
+}
+
+.btn {
+  margin: 30px 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: #c7253e;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+.btn-sub {
+  margin: 30px 5px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #fabc3f;
+  border-radius: 5px;
+  border: none;
+  color: black;
+}
+
+.btn-sub-card {
+  margin: 30px 5px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #c7253e;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+.btn-sub:hover,
+.btn:hover,
+.modal-close:hover,
+.btn-sub-card:hover {
+  background-color: #a81d32;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-sub:active,
+.btn:active,
+.modal-close:active,
+.btn-sub-card:active {
+  transform: translateY(1px);
+}
+
+.modal {
+  width: 600px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 30px;
+  position: fixed;
+
+  background-color: #fabc3f;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.modal-close {
+  width: 50px;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -45px;
+  left: 540px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #c7253e;
+  border: none;
+  color: white;
+}
