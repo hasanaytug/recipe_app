@@ -40,8 +40,7 @@ function App() {
 
     setData((currentState) => {
       const newState = currentState.filter((d) => e.target.innerHTML === d[v]);
-      setCategories(newState.map((d) => d.strCategory));
-      setCousine(newState.map((d) => d.strArea));
+      setTabs(newState);
       return newState;
     });
   };
