@@ -20,7 +20,9 @@ function App() {
     const categoryArr = data.map((e) => e.strCategory);
     const cousineSet = new Set(cousineArr);
     const categorySet = new Set(categoryArr);
-    setCousine([...cousineSet]);
+    setCousine((currentData) => {
+      return [...cousineSet];
+    });
     setCategories([...categorySet]);
   };
 
@@ -29,13 +31,16 @@ function App() {
       const resp = await fetch(url);
       const json = await resp.json();
       setStaticData([...data, json.meals[0]]);
-      setData([...data, json.meals[0]]);
+      setData((currentData) => {
+        const updatedData = [...currentData, json.meals[0]];
+        setTabs(updatedData);
+        return updatedData;
+      });
     };
     fetchData();
-    setTabs(data);
   };
 
-  const handleFilter = (e, v, tab) => {
+  const handleFilter = (e, v) => {
     setData((currentState) => {
       const newState = currentState.filter((d) => e.target.innerHTML === d[v]);
       setTabs(newState);
