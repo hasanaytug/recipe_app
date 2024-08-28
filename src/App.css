@@ -88,3 +88,16 @@ h1 {
   border: none;
   color: white;
 }
+
+@media (width <= 916px) {
+  .modal {
+    width: 250px;
+    height: 500px;
+    overflow: scroll;
+    scrollbar-color: red orange;
+    scrollbar-width: thin;
+  }
+  .modal-close {
+    left: 200px;
+  }
+}
